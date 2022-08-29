@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Mayank-CES/invoiceApp.git/static/css/main.e58667d0.css",
+    "main.js": "/Mayank-CES/invoiceApp.git/static/js/main.32990cbd.js",
+    "static/js/787.1b1aeb5b.chunk.js": "/Mayank-CES/invoiceApp.git/static/js/787.1b1aeb5b.chunk.js",
+    "index.html": "/Mayank-CES/invoiceApp.git/index.html",
+    "main.e58667d0.css.map": "/Mayank-CES/invoiceApp.git/static/css/main.e58667d0.css.map",
+    "main.32990cbd.js.map": "/Mayank-CES/invoiceApp.git/static/js/main.32990cbd.js.map",
+    "787.1b1aeb5b.chunk.js.map": "/Mayank-CES/invoiceApp.git/static/js/787.1b1aeb5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e58667d0.css",
+    "static/js/main.32990cbd.js"
+  ]
+}
