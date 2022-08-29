@@ -1,38 +1,170 @@
 .App {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header{
+  background-color: 	slateblue;
   color: white;
+  text-align: left;
+  width: 100%;
+  padding: 10px 50px 10px 50px;
+  height: 15%;
+}
+.menu{
+  width: 20%;
+  background-color: white;
+  text-align: left;
+}
+.menu-item{
+  width: 100%;
+  padding: 5px 10px 5px 20px;
+  border: 5px solid white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-item:hover {
+  background-color: azure;
+  transition: 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-selected{
+  background-color: ghostwhite;
+  border: 5px solid ghostwhite;
+  border-left: 10px solid slateblue;
+  color: slateblue;
+  padding: 5px 5px 5px 15px;
+}
+.menu-notselected{
+  background-color: white;
+
+}
+
+.content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: ghostwhite;
+  width: 80%;
+}
+
+.title{
+  width: min(45%,600px);
+  text-align: left;
+  margin: 5px 0% 10px 5%;
+}
+.badge{
+  width: min(45%,600px);
+  text-align: right;
+  margin: 20px 5% 5px 0%;
+}
+.badge-pill{
+  background-color: slateblue;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+  border-radius: 5px;
+}
+.table-row{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  margin: 25px 5% 25px 5%;
+  padding: 15px 5% 15px 5%;
+  border-radius: 5px;
+  text-align: left;
+  background-color: white;
+}
+.customer-list{
+  color: black;
+  text-align: left;
+  width: 100%;
+}
+
+.footer{
+  background-color: white;
+  color: plum;
+  text-align: center;
+  padding: 10px 20px 20px 20px;
+  width: 100%;
+  height: max(50px,10%);
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: 5px 5px 5px 5px;
+  background-color: white;
+}
+
+.background-ghost-white{
+  background-color: ghostwhite;
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.title-form{
+  width:95%;
+  text-align: left;
+  margin: 5px 0% 10px 5%;
+}
+form{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  flex-flow: row wrap;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: 20px 5% 20px 5%;
+  background-color: white;
+  width: 85%;
+  padding: 20px 2.5% 20px 2.5%;
+}
+.out-form{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.164);
+  transition: 0.3s;
+  margin: 5px 5px 5px 5px;
+  background-color: white;
+  width: 80%;
+}
+
+.formInput{
+  flex-flow: column nowrap;
+  width: 40%;
+  padding: 10px 5px 10px 5px;
+  color: darkslategray;
+
+}
+
+.form-button{
+  margin-top: 38px;
+  margin-left: 25px;
+}
+
+.width-50{
+  width: 45%;
+  padding: 2.5%;
+}
+
+.width-25{
+  width: min(15%,200px);
+  padding: 6px;
+  margin-top: 0px;
+  margin-left: 60%;
+  font-size: medium;
+}
+.react-icon-align{
+  margin-bottom: -2px;
+  margin-right: 2px;
+}
+
+.save-form{
+  margin-top: 38px;
+  margin-left: 25px;
 }
