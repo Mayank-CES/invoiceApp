@@ -1,3 +1,6 @@
+# Introduction
+An invoice management app built with react javascript. There are view and add pages for each major entities, i.e, Customer, Items and Invoices. MSW was used to Mock API and React testing library was used to write unit tests for the app. Playwright was used to write end to end tests for the app. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
