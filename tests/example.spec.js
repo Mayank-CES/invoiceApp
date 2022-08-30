@@ -24,10 +24,10 @@ test.describe('Item Flow Tests', () => {
     }));
 
     // Go to http://localhost:3000/
-    await page.goto('http://localhost:3000/');
+    await page.goto('https://mayank-invoice-app.netlify.app/');
     // Click div:has-text("Items") >> nth=3
     await page.locator('div:has-text("Items")').nth(3).click();
-    await expect(page).toHaveURL('http://localhost:3000/view-item');
+    await expect(page).toHaveURL('https://mayank-invoice-app.netlify.app/view-item');
     // Click [placeholder="Category"]
     await page.locator('[placeholder="Category"]').click();
     // Click text=Name >> nth=0
@@ -38,7 +38,7 @@ test.describe('Item Flow Tests', () => {
     await page.locator('[data-testid="search-input"]').fill('monitor');
     // Click text=New Item
     await page.locator('text=New Item').click();
-    await expect(page).toHaveURL('http://localhost:3000/add-item');
+    await expect(page).toHaveURL('https://mayank-invoice-app.netlify.app/add-item');
     // Click [placeholder="Name"]
     await page.locator('[placeholder="Name"]').click();
     // Fill [placeholder="Name"]
@@ -60,7 +60,7 @@ test.describe('Item Flow Tests', () => {
     await page.locator('text=Save Item').click();
     // Click div:has-text("Items") >> nth=3
     await page.locator('div:has-text("Items")').nth(3).click();
-    await expect(page).toHaveURL('http://localhost:3000/view-item');
+    await expect(page).toHaveURL('https://mayank-invoice-app.netlify.app/view-item');
     // Click [data-testid="next-page"] svg
     await page.locator('[data-testid="next-page"] svg').click();
   });
