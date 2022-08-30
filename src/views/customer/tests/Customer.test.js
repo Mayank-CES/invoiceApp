@@ -133,12 +133,12 @@ describe("Add-Customer-page", () => {
     };
     const user = userEvent.setup();
   
-    await user.type(nameInput, userData.name);
-    expect(nameInput).toHaveValue(userData.name);
-    await user.type(phoneInput, userData.phone);
-    expect(phoneInput).toHaveValue(userData.phone);
-    await user.type(emailInput, userData.email);
-    expect(emailInput).toHaveValue(userData.email);
+    // await user.type(nameInput, userData.name);
+    // expect(nameInput).toHaveValue(userData.name);
+    // await user.type(phoneInput, userData.phone);
+    // expect(phoneInput).toHaveValue(userData.phone);
+    // await user.type(emailInput, userData.email);
+    // expect(emailInput).toHaveValue(userData.email);
   
     // fireEvent.click(submitButton);
   });
