@@ -17,7 +17,7 @@ const baseURL="http://localhost:8080/Home/items"
 
 test.describe('Item Flow Tests', () => {
 
-  test.only('Item Flow Test', async ({ page }) => {
+  test('Item Flow Test', async ({ page }) => {
     await page.route(baseURL, route => route.fulfill({
       status: 200,
       body: JSON.stringify(testDataItems)

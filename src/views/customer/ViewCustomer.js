@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 import { AppContext } from '../../context/AppContext';
 // import Content from '../components/content'
 import { MdAdd } from 'react-icons/md'

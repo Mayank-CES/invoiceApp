@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useState, useEffect} from 'react';
 // import { v4 as uuidv4 } from 'uuid';
-import {VIEWS,initialState} from '../utils/Constant'
+import {initialState} from '../utils/Constant'
 import { getCustomersAPI, getItemsAPI, getInvoicesAPI} from '../components/Api';
 
 // const VIEWS = {
@@ -194,7 +194,8 @@ export const AppProvider = (props) => {
 				items: state.items,
 				invoices: state.invoices,
 				currentMenu: state.currentMenu,
-
+				itemResponse,
+				loading,
 				dispatch,
 				setItemResponse,
 				setLoading,
