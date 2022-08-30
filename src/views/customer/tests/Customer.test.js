@@ -53,7 +53,7 @@ describe("static tests", () => {
     expect(screen.getByText("Phone")).toBeInTheDocument();
     expect(screen.getByText("Email")).toBeInTheDocument();
     const errMsg=screen.getAllByTestId("error-msg")
-    console.log(errMsg)
+    // console.log(errMsg)
 
     expect(errMsg).toHaveLength(3);
 
