@@ -10,7 +10,7 @@ import { itemHeaders, searchOptions2 } from '../../utils/Constant';
 const ViewItem = () => {
     const { items, dispatch } = useContext(AppContext);
     let navigate = useNavigate();
-    const { currentMenu, changeView } = useContext(AppContext);
+    // const { currentMenu, changeView } = useContext(AppContext);
 
     // console.log(itemVal)
 
