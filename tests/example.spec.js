@@ -36,6 +36,12 @@ test.describe('Item Flow Tests', () => {
     await page.locator('[data-testid="search-input"]').click();
     // Fill [data-testid="search-input"]
     await page.locator('[data-testid="search-input"]').fill('monitor');
+
+    // // Click text=Monitor
+    await page.locator('text=Monitor').isVisible();
+
+    expect(await page.locator('text=Monitor').count()).toEqual(1);
+
     // Click text=New Item
     await page.locator('text=New Item').click();
     await expect(page).toHaveURL('https://mayank-invoice-app.netlify.app/add-item');
