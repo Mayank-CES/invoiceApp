@@ -45,7 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.24.1",
+    "@playwright/test": "^1.25.1",
     "@testing-library/dom": "^8.17.1",
     "@testing-library/user-event": "^14.4.3",
     "gh-pages": "^4.0.0",
