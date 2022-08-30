@@ -140,7 +140,7 @@ describe("Add-Customer-page", () => {
     await user.type(emailInput, userData.email);
     expect(emailInput).toHaveValue(userData.email);
   
-    // fireEvent.click(submitButton);
+    fireEvent.click(submitButton);
   });
 });
 
