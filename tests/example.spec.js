@@ -28,6 +28,10 @@ test.describe('Item Flow Tests', () => {
     // Click div:has-text("Items") >> nth=3
     await page.locator('div:has-text("Items")').nth(3).click();
     await expect(page).toHaveURL('https://mayank-invoice-app.netlify.app/view-item');
+
+    await expect(page.locator(`text=Computer`)).toHaveText(
+      `Computer`
+    );
     // Click [placeholder="Category"]
     await page.locator('[placeholder="Category"]').click();
     // Click text=Name >> nth=0
@@ -41,6 +45,8 @@ test.describe('Item Flow Tests', () => {
     await page.locator('text=Monitor').isVisible();
 
     expect(await page.locator('text=Monitor').count()).toEqual(1);
+
+
 
     // Click text=New Item
     await page.locator('text=New Item').click();
@@ -67,8 +73,13 @@ test.describe('Item Flow Tests', () => {
     // Click div:has-text("Items") >> nth=3
     await page.locator('div:has-text("Items")').nth(3).click();
     await expect(page).toHaveURL('https://mayank-invoice-app.netlify.app/view-item');
+
     // Click [data-testid="next-page"] svg
     await page.locator('[data-testid="next-page"] svg').click();
+
+    expect(await page.locator("tr").count()).toEqual(
+      testDataItems.length -4 + 1
+    );
   });
 });
 
