@@ -22,8 +22,10 @@ const Table = (props) => {
 
   const handlePerPage=(e) =>{
     if (e.target.value>0){
+      setCount(parseInt(0));
       setPerPage(e.target.value);
     }else{
+      setCount(parseInt(0));
       setPerPage(4);
     }
   }
@@ -47,20 +49,25 @@ const Table = (props) => {
 
   const incrementCount = (val) =>{
 
-    if (count <(filteredList.length/perPage-1)){
-      setCount(count+val);
+    if ((count/perPage) < Math.ceil(filteredList.length/perPage)-1){
+      setCount(parseInt(count)+parseInt(val));
     }else{
 
     }
   }
   const decrementCount = (val) =>{
     if (count >=val){
-      setCount(count-val);
+      setCount(parseInt(count)-parseInt(val));
     }else{
     }
   }
-  
-  pageList=filteredList.slice(count,count+perPage)
+  console.log("count ",parseInt(count), " , Per Page ",parseInt(count)+parseInt(perPage));
+  pageList=filteredList.slice(parseInt(count),parseInt(count)+parseInt(perPage))
+
+  console.log("Filtered List ",filteredList);
+  console.log("Page List ",pageList);
+  console.log("count ",count);
+  console.log("Per Page ",perPage);
 
   return (
     <>
