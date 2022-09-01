@@ -16,6 +16,7 @@ const Table = (props) => {
   var pageList=[];
 
   const handleChange =(e) =>{
+    setCount(parseInt(0));
     setSearchTerm(e.target.value.toLowerCase());
     console.log(searchTerm);
   }
@@ -61,13 +62,13 @@ const Table = (props) => {
     }else{
     }
   }
-  console.log("count ",parseInt(count), " , Per Page ",parseInt(count)+parseInt(perPage));
+  // console.log("count ",parseInt(count), " , Per Page ",parseInt(count)+parseInt(perPage));
   pageList=filteredList.slice(parseInt(count),parseInt(count)+parseInt(perPage))
 
-  console.log("Filtered List ",filteredList);
-  console.log("Page List ",pageList);
-  console.log("count ",count);
-  console.log("Per Page ",perPage);
+  // console.log("Filtered List ",filteredList);
+  // console.log("Page List ",pageList);
+  // console.log("count ",count);
+  // console.log("Per Page ",perPage);
 
   return (
     <>

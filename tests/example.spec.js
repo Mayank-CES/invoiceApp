@@ -1,16 +1,16 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-const testDataCustomers=[{id:1, name:"Mayank",phone:"9876543210",email:"mayank@gmail.com"}
-,{id:2, name:"Pulkit",phone:"9876556789",email:"pulkit@gmail.com"}
-,{id:3, name:"Anup",phone:"0123456789",email:"anup@gmail.com"}];
+// const testDataCustomers=[{id:1, name:"Mayank",phone:"9876543210",email:"mayank@gmail.com"}
+// ,{id:2, name:"Pulkit",phone:"9876556789",email:"pulkit@gmail.com"}
+// ,{id:3, name:"Anup",phone:"0123456789",email:"anup@gmail.com"}];
 
 const testDataItems = [{id: 1, name: 'Computer', description: 'Powerful desktop setup', price: 69999, addedOn: '20 Jan 1970'},
 {id: 2, name: 'Phone', description: 'Connect with others.', price: 9999, addedOn: '20 Jan 1970'},
 {id: 3, name: 'OLED TV', description: 'Bring Home A Cinematic Experience Like Never Before', price: 99999, addedOn: '20 Jan 1970'},
 {id: 4, name: 'Monitor', description: 'Display to increase productivity as well as consume OTT content.', price: 29999, addedOn: '17 Aug 2022'},
-{id: 5, name: 'SDD', description: 'High speed "On The Go" Data backup.', price: 15000, addedOn: '17 Aug 2022'},
-{id: 6, name: 'Earbuds', description: 'Listen to music completely handsfree', price: 5999, addedOn: '17 Aug 2022'}]
+{id: 5, name: 'SDD', description: 'High speed "On The Go" Data backup.', price: 15000, addedOn: '17 Aug 2022'}];
+// {id: 6, name: 'Earbuds', description: 'Listen to music completely handsfree', price: 5999, addedOn: '17 Aug 2022'}]
 
 const baseURL="http://localhost:8080/Home/items"
 
@@ -45,8 +45,6 @@ test.describe('Item Flow Tests', () => {
     await page.locator('text=Monitor').isVisible();
 
     expect(await page.locator('text=Monitor').count()).toEqual(1);
-
-
 
     // Click text=New Item
     await page.locator('text=New Item').click();
