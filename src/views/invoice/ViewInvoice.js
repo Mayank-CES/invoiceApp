@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import { AppContext } from '../../context/AppContext';
 import { MdAdd } from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ import { invoiceHeaders, searchOptions3 } from '../../utils/Constant';
 const ViewInvoice = () => {
     const { invoices, dispatch } = useContext(AppContext);
     let navigate = useNavigate();
-    const { currentMenu, changeView } = useContext(AppContext);
+    const [paidUpdate,setPaidUpdate]=useState(false);
 
     const getInvoicesData= async()=>{
         const data = await getInvoicesAPI();
@@ -36,6 +36,11 @@ const ViewInvoice = () => {
         });
     };
 
+    useEffect(()=>{
+        console.log('render');
+        getInvoicesData();
+    },[paidUpdate])
+
 
     const handleSubmit = () =>{
         console.log("Clicked New Invoice Button")
@@ -53,7 +58,7 @@ const ViewInvoice = () => {
         }
         // console.log('Sent Data ',data)
         patchInvoicesAPI(data);
-
+        setPaidUpdate(!paidUpdate);
     };
 
   return (
