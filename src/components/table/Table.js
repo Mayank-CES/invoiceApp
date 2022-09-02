@@ -46,6 +46,7 @@ const Table = (props) => {
     else if ( selectedOption === 3 && searchVal[3].toLowerCase().includes(searchTerm)){
         return val
     }
+    return null;
   })
 
   const incrementCount = (val) =>{
